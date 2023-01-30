@@ -50,4 +50,21 @@
   hardware = {
     cpu.intel.updateMicrocode = true;
   };
+
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+
+  home-manager.users.${cfg.user} = {
+    imports = [ ../home_manager/home.nix ];
+  };
+
+  programs.evolution = {
+    enable  = true;
+    plugins = [ pkgs.evolution-ews ];
+  };
+
+  services.gnome = {
+    evolution-data-server.enable = true;
+    gnome-keyring.enable         = true;
+    gnome-online-accounts.enable = true;
+  };
 }
