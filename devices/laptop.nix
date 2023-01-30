@@ -63,9 +63,11 @@
   programs = {
     light.enable = true;
     dconf.enable = true;
+    adb.enable = true;
   };
 
   users.users.${cfg.user}.extraGroups = [
     "scanner" "lp" "libvirtd" "kvm" "docker" "lxd" "plugdev"
+    "adbusers"
   ];
 }

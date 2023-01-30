@@ -40,7 +40,7 @@
     virt-manager prismlauncher openjdk8 unzip jq
 
     # Dev
-    delta ccls poetry
+    delta ccls poetry android-studio
 
     # LaTeX
     texstudio texlive.combined.scheme-full
